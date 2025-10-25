@@ -1,0 +1,6 @@
+export * from './AdminFila'
+export * from './CeldaNumero'
+export * from './GrillaNumeros'
+export * from './ModalReserva'
+export * from './Footer'
+export * from './Header'
