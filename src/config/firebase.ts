@@ -4,12 +4,12 @@ import { browserLocalPersistence, getAuth, setPersistence } from "firebase/auth"
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCiO1ydx0HwbhWl55z9MEvJqoliw_vJBIg",
-  authDomain: "tombola-sorteo.firebaseapp.com",
-  projectId: "tombola-sorteo",
-  storageBucket: "tombola-sorteo.firebasestorage.app",
-  messagingSenderId: "173928571058",
-  appId: "1:173928571058:web:8bc608beac506d75daa9ab"
+  apiKey: import.meta.env.VITE_APIKEY,
+  authDomain: import.meta.env.VITE_AUTHDOMAIN,
+  projectId: import.meta.env.VITE_PROJECTID,
+  storageBucket: import.meta.env.VITE_STORAGEBUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGINGSENDERID,
+  appId: import.meta.env.VITE_APPID,
 };
 
 const app = initializeApp(firebaseConfig);
