@@ -31,7 +31,7 @@ export const ModalReserva = ({ numero, onClose }: ModalReservaProps) => {
 
     const handleWhatsApp = () => {
         const mensaje = `Hola! Quiero reservar el número ${numero.id}.\nNombre: ${cliente.nombre} ${cliente.apellido}\nTeléfono: ${cliente.telefono}`;
-        const adminNumber = "5493704632110"; // tu número sin + ni espacios
+        const adminNumber = import.meta.env.VITE_ADMINNUMERO;
         const url = `https://wa.me/${adminNumber}?text=${encodeURIComponent(
             mensaje
         )}`;
@@ -40,7 +40,6 @@ export const ModalReserva = ({ numero, onClose }: ModalReservaProps) => {
 
     const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        // onConfirm(cliente.nombre, cliente.apellido);
         await handleReserva()
         handleWhatsApp();
         onClose();
