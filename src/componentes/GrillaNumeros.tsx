@@ -37,7 +37,6 @@ export const GrillaNumeros = () => {
             }));
             setNumeros(numerosData);
             setCargando(false);
-            console.log(numerosData);
         });
         return () => unsubscribe();
     }, []);
